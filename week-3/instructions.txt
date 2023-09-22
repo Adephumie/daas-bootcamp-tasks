@@ -1,0 +1,116 @@
+Docker Assessment: Please click the link to the 'daasclass23' repository provided below. 
+Once you're inside, go to the 'week3-intro-to-docker' folder. 
+Take a moment to review both assessments, and then respond to only one of them. 
+However, if you wish, you can attempt both assessments. All the best!
+
+https://bitbucket.org/daasdotng/daasclass23/src/develop/
+
+
+
+Option 1
+
+Docker Assignment for Web Application with Security and Best Practices.
+
+Challenge:
+
+- Create a web application with source code of your choice that has the ability to 
+login to a web portal with user login records saved in any in-memory or relational 
+database of your choice.
+- Ensure the Dockerfile follows best practices and runs as a container while following best security practices.
+- The backend and frontend should run in different containers.
+- Upload your image to a public repository.
+- Create a README file of how you were able to achieve this.
+
+Best Practices for Dockerfiles:
+- Use a base image that is as minimal as possible.
+- Install only the packages that your application needs.
+- Set the working directory to the directory where your application code is located.
+- Set the entrypoint command to start your application.
+- Use a label to identify your image.
+
+Best Practices for Container Security:
+- Use a non-root user to run your application in the container as described in class.
+- Set the permissions on the container's files and directories to the minimum required.
+- Expose only the ports that your application needs.
+- Use a security scanner to scan your containers for vulnerabilities (Bonus)
+
+Instructions:
+- Create a new directory for your project.
+- Create a Dockerfile for your backend container.
+- Create a Dockerfile for your frontend container.
+- Write the source code (or download) for your web application.
+- Build your backend and frontend containers.
+- Upload your containers to any public repository of your choice, such as Docker Hub.
+
+Create a README file that explains how to deploy and run your web application using 
+Docker and upload to your bitbucket or github repository.
+
+-------------------------------------------------------
+-------Example Dockerfile for Backend Container:-------
+
+Dockerfile
+FROM python:3.9
+
+WORKDIR /app
+
+COPY requirements.txt .
+RUN pip install -r requirements.txt
+
+COPY . .
+
+EXPOSE 5000
+
+CMD ["gunicorn", "-b", "0.0.0.0:5000", "app:app"]
+------------------------------------------------
+
+
+-------Example Dockerfile for Frontend Container:-----
+
+Dockerfile
+FROM nginx:1.23
+
+WORKDIR /usr/share/nginx/html
+
+COPY . .
+
+EXPOSE 80
+
+CMD ["nginx", "-g", "daemon off;"]
+------------------------------------------------
+
+
+Once you have built and uploaded your containers, you can deploy your web application 
+using the following steps:
+
+- Create a Docker Compose file (or use docker run commands) that defines your backend and 
+frontend services.
+- Start the Docker Compose file.
+- Access your web application at http://localhost:port
+
+
+--------------------------------------------
+-------Example Docker Compose File:---------
+
+YAML
+version: "3.9"
+
+services:
+  backend:
+    image: your-backend-image
+    ports:
+      - "5000:5000"
+
+  frontend:
+    image: your-frontend-image
+    ports:
+      - "80:80"
+    depends_on:
+      - backend
+----------------------------------------------
+Grading:
+Your project will be evaluated on the completeness of the web application, the security measures implemented, adherence to Docker best practices, and the clarity of your documentation. Extra points will be awarded for creativity in solving security challenges.
+
+Conclusion:
+This Docker assignment is designed to challenge your daas mentees to think outside the box and implement best practices for Dockerfile security and container security.
+
+DEADLINE FOR UPLOAD OF IMAGES: 22nd September 2023 (12pm)
