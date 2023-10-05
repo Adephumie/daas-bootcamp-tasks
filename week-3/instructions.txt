@@ -114,3 +114,73 @@ Conclusion:
 This Docker assignment is designed to challenge your daas mentees to think outside the box and implement best practices for Dockerfile security and container security.
 
 DEADLINE FOR UPLOAD OF IMAGES: 22nd September 2023 (12pm)
+
+
+
+OPTION 2
+
+Assignment: Secure Dockerized Web Application with Authentication
+
+Objective:
+Create a highly secure Dockerized web application with user authentication capabilities. This assignment will test your skills in developing, containerizing, and securing a web application.
+
+Requirements:
+
+1.Web Application Development:
+
+-Choose a web framework and programming language of your choice.
+-Develop a web application with user registration and login functionality.
+-Use a secure password hashing mechanism to store user passwords.
+-Ensure that the application is capable of handling user sessions securely.
+
+2. Database Integration:
+
+Choose either a relational (e.g., PostgreSQL, MySQL) or NoSQL (e.g., MongoDB) database.
+Implement database integration to store user information securely.
+
+3. Dockerization:
+
+-Create a Dockerfile for your web application.
+-Containerize your application ensuring it follows best practices:
+-Implement a multi-stage build if applicable.
+-Only expose necessary ports.
+-Use a minimal base image.
+-Implement a health check mechanism.
+-Set appropriate environment variables.
+
+4. Security Measures:
+
+-Implement security best practices within your web application.
+-Ensure that sensitive data (like API keys, passwords, etc.) is not hardcoded within the application code.
+-Use HTTPS to secure communications between the client and the server.
+-Implement proper authentication and authorization mechanisms.
+-Ensure your database is properly secured with appropriate access controls.
+
+Documentation:
+
+-Write a comprehensive README.md file that explains:
+-How to build and run the Docker container.
+-How to access the web application.
+-Any specific security measures you've implemented.
+-Details on the database used and how to set it up.
+-Any challenges you faced and how you overcame them.
+
+Deployment:
+
+-Upload the Docker image of your web application to a public container registry (e.g., Docker Hub).
+-Include clear instructions in your README.md on how to pull and run the Docker image.
+
+Submission:
+
+-Share the link to your public Docker image repository.
+-Share a link to your GitHub repository containing the source code and the README.md file.
+
+----------------------------------------------
+Grading:
+Your project will be evaluated on the completeness of the web application, the security measures implemented, adherence to Docker best practices, and the clarity of your documentation. Extra points will be awarded for creativity in solving security challenges.
+
+Conclusion:
+This Docker assignment is designed to challenge your daas mentees to think outside the box and implement best practices for Dockerfile security and container security.
+
+DEADLINE FOR UPLOAD OF IMAGES: 22nd September 2023 (12pm)
+
