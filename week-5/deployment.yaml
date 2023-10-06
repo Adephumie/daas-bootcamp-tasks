@@ -1,21 +1,12 @@
-# Deployment
-apiVersion: apps/v1
-kind: Deployment
+# Pod creation
+apiVersion: v1
+kind: Pod
 metadata:
   name: web-app-pod
   labels:
     app: frontend
 spec:
-  replicas: 4
-  selector:
-    matchLabels:
-      app: frontend
-  template:
-    metadata:
-      labels:
-        app: frontend
-    spec:
-      containers:
+  containers:
       - name: nginx
         image: nginx:latest
         ports:
