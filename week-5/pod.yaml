@@ -1,0 +1,13 @@
+# Pod creation
+apiVersion: v1
+kind: Pod
+metadata:
+  name: web-app-pod
+  labels:
+    app: frontend
+spec:
+  containers:
+      - name: nginx
+        image: nginx:latest
+        ports:
+        - containerPort: 80

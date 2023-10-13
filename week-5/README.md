@@ -30,3 +30,10 @@
 
     In this case, the IP address is the one found in the second list.
 
+
+    Question 2
+
+1. Describing deployment with:
+
+
+

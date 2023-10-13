@@ -1,16 +1,25 @@
-# Pod creation
-apiVersion: v1
-kind: Pod
+# Deployment Creation
+apiVersion: apps/v1
+kind: Deployment
 metadata:
-  name: web-app-pod
+  name: my-app-deployment
   labels:
     app: frontend
 spec:
-  containers:
-      - name: nginx
-        image: nginx:latest
-        ports:
-        - containerPort: 80
+  replicas: 4
+  selector:
+    matchLabels:
+      app: frontend
+  template:
+    metadata:
+      labels:
+        app: frontend
+    spec:
+      containers:
+        - name: nginx
+          image: nginx:latest
+          ports:
+            - containerPort: 80
 
 ---
 # Service for deployment
