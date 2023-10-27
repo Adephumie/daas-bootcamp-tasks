@@ -11,9 +11,9 @@ Task 2:
 1. Build Agent
 2. Version Control Source Root (VCS Root)
 3. Artifacts
-4. Projects Build
+4. Build Overview
 5. Triggers
-6. Configurations
+6. Configuration parameters
 7. Step
 8. Queue
 9. Configuration Templates
