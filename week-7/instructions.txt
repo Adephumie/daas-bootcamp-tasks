@@ -1,0 +1,89 @@
+Assessment git repo Link - https://bitbucket.org/daasdotng/daasclass23-lectures-assessment/src/develop/
+
+Assessment 1: Basic TeamCity CI/CD Understanding
+
+Objective: To assess your basic understanding of setting up a TeamCity CI/CD pipeline from 
+Bitbucket to build a Docker image and push it to DockerHub.
+
+Task 1: Multiple Choice Questions
+
+1. What does CI/CD stand for? a) Computer Intelligence/Continuous Deployment 
+b) Continuous Integration/Continuous Delivery c) Code Integration/Delivery 
+d) Continuous Iteration/Delivery
+
+2. In the context of TeamCity, what is a "build configuration"? a) A list of all team members 
+b) A Dockerfile c) A set of build steps and settings d) A Git repository
+
+3. What is the purpose of a CI/CD pipeline? a) To create Docker containers 
+b) To automate the software delivery process c) To perform code reviews d) To monitor server health
+
+4. Which version control system is commonly integrated with TeamCity for source code 
+management? a) Subversion b) Mercurial c) CVS d) All of the above
+
+Task 2: Fill in the Blanks
+
+Complete the following sentences:
+
+1. In TeamCity, a ___ is a machine or environment where the actual build process is executed.
+
+2. A ______ in TeamCity defines the source code repository and its connection details, 
+allowing TeamCity to fetch the source code.
+
+3. The ___ are files and data generated during a build, such as compiled binaries, that can be 
+stored and used for deployment or other purposes.
+
+4. TeamCity provides a _ feature that allows you to track and review the results of previous build runs.
+
+5. Build _ in TeamCity are responsible for initiating a build when certain conditions, like code 
+changes, are detected.
+
+6. TeamCity allows you to define build ___ to customize various aspects of the build process, 
+like compiler flags or version numbers.
+
+7. In a TeamCity build configuration, a build _ specifies a particular task or operation to be 
+performed during the build process.
+
+8. The build _ in TeamCity is where builds wait to be executed on an available build agent.
+
+9. TeamCity provides build __ to create a reusable configuration for building different projects 
+with similar build requirements.
+
+10. TeamCity can be integrated with various version control systems (VCS) like __, _, __, and ______ 
+to manage and track the source code used in the build process.
+
+Assessment 2: TeamCity CI/CD Implementation
+
+Objective: To assess your ability to set up a TeamCity CI/CD pipeline from Bitbucket/Github
+to build a Docker image and push it to DockerHub.
+
+Task 1: Practical Implementation
+
+Instructions:
+
+Create a new Bitbucket/GitHub repository containing a simple web application. You can use any 
+programming language or framework.
+
+Set up a TeamCity server and configure it to monitor the Bitbucket repository.
+
+Create a TeamCity build configuration that performs the following steps:
+
+-Build the web application. 
+-Run unit tests. 
+-Create a Docker image from the application. 
+-Push the Docker image to DockerHub. 
+-Document the entire process with step-by-step instructions and configuration files. 
+Your documentation should be detailed enough for someone else to recreate the pipeline.
+
+Task 2: Troubleshooting and Optimization
+
+In this task, you will need to troubleshoot build issues and create a TeamCity Pipeline
+
+Instructions:
+
+Make reference to the nodeexpressApp in this same folder, there is an issue with building an image from the docker file. You need to troubleshoot and figure out the issue; then proceed to build a pipeline and push the image to dockerHub.
+
+Suggest one or more optimizations for the CI/CD pipeline to make it more efficient or reliable.
+
+Provide a before-and-after comparison of the pipeline's performance, such as build time or resource utilization, after implementing the optimizations.
+
+These assessments will help you gauge your understanding of TeamCity CI/CD and their ability to apply the knowledge to real-world scenarios.
