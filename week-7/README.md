@@ -1,4 +1,5 @@
 # **TeamCity CI Configuration**
+Assessment 2
 
 1. We set up a repository on this [URL](https://github.com/Team-Cloud-Champions/fullstack-bank) holding our application. 
 2. We were having memory issues with setting up Servers, so we decided to go with the Teamcity Cloud Option to save time.

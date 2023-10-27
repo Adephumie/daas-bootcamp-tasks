@@ -5,18 +5,18 @@ Task 1:
 1. b) Continuous Integration/Continuous Delivery
 2. c) A set of build steps and settings
 3. b) To automate the software delivery process
-4. 
+4. d) All of the above
 
 Task 2:
-1.
-2.
-3.
-4.
-5.
-6.
-7.
-8.
-9.
-10.
+1. Build Agent
+2. Version Control Source Root (VCS Root)
+3. Artifacts
+4. Projects Build
+5. Triggers
+6. Configurations
+7. Step
+8. Queue
+9. Configuration Templates
+10. Git, Mercurial, Perforce, and Team founadtion Server
 
-Assessment 2
+
