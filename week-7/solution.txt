@@ -17,6 +17,6 @@ Task 2:
 7. Step
 8. Queue
 9. Configuration Templates
-10. Git, Mercurial, Perforce, and Team founadtion Server
+10. Git, Mercurial, Perforce, and Team foundation Server
 
 

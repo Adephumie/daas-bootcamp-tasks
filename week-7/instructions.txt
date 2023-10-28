@@ -80,10 +80,16 @@ In this task, you will need to troubleshoot build issues and create a TeamCity P
 
 Instructions:
 
-Make reference to the nodeexpressApp in this same folder, there is an issue with building an image from the docker file. You need to troubleshoot and figure out the issue; then proceed to build a pipeline and push the image to dockerHub.
+Make reference to the nodeexpressApp in this same folder, there is an issue 
+with building an image from the docker file. You need to troubleshoot and 
+figure out the issue; then proceed to build a pipeline and push the image 
+to dockerHub.
 
-Suggest one or more optimizations for the CI/CD pipeline to make it more efficient or reliable.
+Suggest one or more optimizations for the CI/CD pipeline to make it more 
+efficient or reliable.
 
-Provide a before-and-after comparison of the pipeline's performance, such as build time or resource utilization, after implementing the optimizations.
+Provide a before-and-after comparison of the pipeline's performance, such as 
+build time or resource utilization, after implementing the optimizations.
 
-These assessments will help you gauge your understanding of TeamCity CI/CD and their ability to apply the knowledge to real-world scenarios.
+These assessments will help you gauge your understanding of TeamCity CI/CD 
+and their ability to apply the knowledge to real-world scenarios.
