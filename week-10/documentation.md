@@ -102,4 +102,4 @@ Apache2 running status
 
 
 ## VM Overview
-    ![vm-overview](images/vm-overview.jpeg)
+![vm-overview](images/vm-overview.jpeg)
