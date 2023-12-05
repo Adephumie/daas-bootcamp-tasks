@@ -1,0 +1,29 @@
+# apiVersion: v1
+# kind: PersistentVolume
+# metadata:
+#   name: nginx-pv
+#   namespace: daas
+# spec:
+#   capacity:
+#     storage: 5Gi
+#   accessModes:
+#     - ReadWriteOnce
+#   awsElasticBlockStore:
+#     volumeID: vol-09ee891f486b64438
+#     fsType: ext4
+#   persistentVolumeReclaimPolicy: Retain
+
+---
+
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: nginx-pvc
+  namespace: daas
+spec:
+  accessModes:
+    - ReadWriteOnce
+  storageClassName: gp2
+  resources:
+    requests:
+      storage: 5Gi

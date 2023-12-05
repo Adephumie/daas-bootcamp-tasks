@@ -1,0 +1,18 @@
+Introduction to Kubernetes part 1
+
+Question 1:
+You are tasked with deploying a web application in your Kubernetes cluster. 
+The application consists of a frontend pod and a backend pod. 
+The frontend should be accessible only within the cluster, and the backend needs 
+to be accessible from outside the cluster. 
+Create the necessary Kubernetes resources to achieve this, making use of ClusterIP and NodePort services. 
+Additionally, ensure that these resources are organized within a dedicated namespace 
+called "name-of-your-team_daasbootcamp".
+
+Question 2:
+Imagine you have a Kubernetes cluster where you are hosting multiple microservices 
+within different namespaces. Each microservice requires a specific amount of CPU and memory resources. 
+You need to demonstrate resource management by setting resource requests and limits for the pods in 
+the "production" namespace. Choose one of the microservices (e.g., "frontend") and define the 
+appropriate resource requests and limits for its pods. 
+Explain the rationale behind your resource allocation decisions and how these settings impact pod behavior.

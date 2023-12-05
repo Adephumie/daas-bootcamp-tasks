@@ -1,0 +1,34 @@
+Introduction to Kubernetes part 1
+
+
+Question 1:
+
+Objective: Create a basic Kubernetes service using NodePort.
+
+Scenario: You have a simple web application running in a Kubernetes pod. 
+Your task is to expose this application to the external world using a NodePort service.
+
+Steps:
+
+-Create a YAML file for a pod named "web-app-pod" running a web server container with the image "nginx:latest."
+-Deploy the pod to the cluster.
+-Create a NodePort service named "web-app-service" to expose the pod on a specific port, e.g., 31000.
+-Ensure the service is accessible from outside the cluster.
+
+
+Question 2:
+
+Objective: Set resource requests and limits for a Kubernetes deployment.
+
+Scenario: You have a Kubernetes deployment named "my-app-deployment" running a critical application. 
+To ensure resource utilization, you need to configure resource requests and limits.
+
+Steps:
+
+-Describe the current state of the "my-app-deployment" deployment to check for any existing 
+resource requests and limits.
+-Modify the deployment YAML file to set resource requests for CPU to "100m" and memory to "128Mi" for 
+the application containers.
+-Set resource limits for CPU to "200m" and memory to "256Mi."
+-Apply the changes to the deployment.
+-Verify that the resources are configured correctly for the containers in the "my-app-deployment."

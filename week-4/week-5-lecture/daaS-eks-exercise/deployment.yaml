@@ -1,0 +1,93 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nginx-deployment
+  namespace: daas
+  labels:
+    app: nginx
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: nginx
+  template:
+    metadata:
+      labels:
+        app: nginx
+    spec:
+      containers:
+      - name: nginx
+        image: nginx:1.21.3
+        env:
+        - name: NGINX_HOST
+          valueFrom:
+            configMapKeyRef:
+              name: nginx-config
+              key: nginx.name
+        ports:
+        - containerPort: 80
+        volumeMounts:
+        - name: config-volume
+          mountPath: /etc/nginx/conf.d
+        - name: nginx-tls-secret
+          mountPath: /etc/nginx/ssl
+          readOnly: true
+        - name: nginx-storage
+          mountPath: /data/nginx/html
+        resources:
+          limits:
+            cpu: "1"
+            memory: "512Mi"
+          requests:
+            cpu: "0.5"
+            memory: "256Mi"
+      volumes:
+      - name: nginx-storage
+        persistentVolumeClaim:
+          claimName: nginx-pvc
+      - name: nginx-tls-secret
+        secret:
+          secretName: nginx-tls-secret
+      - name: config-volume
+        configMap:
+          name: nginx-config
+          items:
+          - key: default.conf
+            path: default.conf
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: nginx-service
+  namespace: daas
+spec:
+  ports:
+  - port: 80
+    protocol: TCP
+  type: ClusterIP
+  selector:
+    app: nginx
+---
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: nginx-ingress
+  namespace: daas
+  annotations:
+    alb.ingress.kubernetes.io/scheme: internet-facing
+    alb.ingress.kubernetes.io/target-type: ip
+spec:
+  ingressClassName: alb
+  rules:
+    - host: nginx.daas.ng
+      http:
+        paths:
+          - path: /
+            pathType: Exact
+            backend:
+              service:
+                name: nginx-service
+                port:
+                  number: 80
